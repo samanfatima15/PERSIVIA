@@ -27,3 +27,11 @@ def commonprefix(words):
                 return firstword[:i]
     print("ALL WORDS IN STRING MATCH ")
     return firstword     
+
+#LENGHT OF LAST WORD
+def lastwordlen(sentence):
+    words= sentence.split()
+    lastword=words[-1]
+    answer= len(lastword)
+    return answer
+
