@@ -60,3 +60,18 @@ def reversed(x):
     if answer <-2147483648 or answer > -2147483648:
         return 0
     return answer
+
+#SUM OF THREE NUM
+def threeSumClosest(self, nums, target):
+
+        sumofnum = (nums[0] + nums[1] + nums[2])
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                 for k in range(j + 1, len(nums)):
+
+                    current_sum = (nums[i] + nums[j] + nums[k])
+
+                    if abs((current_sum) - (target)) < abs((sumofnum) - target):
+                        sumofnum = current_sum
+
+        return sumofnum
