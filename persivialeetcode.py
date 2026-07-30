@@ -35,3 +35,11 @@ def lastwordlen(sentence):
     answer= len(lastword)
     return answer
 
+
+# squareroot of number without using sqrt()
+def squareroot(number):
+    i=0
+    while i*i <=number :
+        i=i+1 
+    return i-1
+
