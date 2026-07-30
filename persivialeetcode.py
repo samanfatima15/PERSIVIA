@@ -43,3 +43,20 @@ def squareroot(number):
         i=i+1 
     return i-1
 
+
+#MEDIUM QUESTIONS
+#REVERSE NUMBER it shoudlnt exceed SIGNED BIT 32 number
+def reversed(x):
+    negative=False
+    if x< 0:
+        negative= True
+        x=-x #making positive temporaily for ez/simpler operations ahead
+    stringnumber=str(x)
+    reversednum=stringnumber[::-1]
+    answer=int(reversednum)
+    if negative:
+        answer=-answer
+
+    if answer <-2147483648 or answer > -2147483648:
+        return 0
+    return answer
