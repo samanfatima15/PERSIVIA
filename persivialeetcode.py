@@ -61,6 +61,26 @@ def reversed(x):
         return 0
     return answer
 
+#LONGEST SUBSTRING WITHOUT REPEATING CHARACTEDRs
+def lengthofsubstring(strs):
+    longest = 0
+
+    for i in range(len(strs)):
+        current = ""
+
+        for j in range(i, len(strs)):
+
+            if strs[j] not in current:
+                current = current + strs[j]
+
+                if len(current) > longest:
+                    longest = len(current)
+
+            else:
+                break
+
+    return longest
+    
 #SUM OF THREE NUM
 def threeSumClosest(self, nums, target):
 
