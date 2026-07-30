@@ -15,3 +15,15 @@ def palindrome(numgiven):
     else:
         print("Number is NOT palindome")
         return False
+
+#Longest Common Prefix 
+def commonprefix(words):
+    if len(words)== 0:
+        return "" # when no word no prefix so empty string
+    firstword=words[0] 
+    for i in range(len(firstword)):
+        for word in words[1:]:
+            if (i>=len(word)) or (word[i]!=firstword[i]):
+                return firstword[:i]
+    print("ALL WORDS IN STRING MATCH ")
+    return firstword     
